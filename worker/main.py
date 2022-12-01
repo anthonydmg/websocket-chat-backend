@@ -9,8 +9,9 @@ from src.redis.cache import Cache
 from src.model.gptj import GPT
 from src.redis.producer import Producer
 from src.redis.stream import StreamConsumer
-
+from src.chatbot.pipeline import Pipeline
 redis = Redis()
+pipeline = Pipeline()
 
 async def main():
     json_client = redis.create_rejson_connection()
@@ -21,7 +22,6 @@ async def main():
 
     print("Stream consumer started")
     print("Stream waiting for new messages")
-
 
     while True:
         response = await consumer.consume_stream(stream_channel="message_channel",
@@ -53,13 +53,16 @@ async def main():
                 input = ["" + i['msg'] for i in message_data]
 
                 input = "".join(input)
+                
+                responses = pipeline.run(message = input)
+                ## aqui model response
 
-                res = GPT().query(input = input)
+                ##res = GPT().query(input = input)
 
                 msg = Message(
-                    msg = res
+                    msg = responses[0]
                 )
-
+                
                 print("msg:", msg)
                 
                 stream_data = {}
