@@ -62,7 +62,7 @@ utter_responses = {
   
     "utter_retiro_total__procedimiento":["Primero informale que el procedimiento de retiro total es autorizado solo por motivos de fuerza mayor, los cuales deben ser sustentados. Para realizar el retiro deberá presentar la solicitud del retiro total dirigida al decano de la facultad y sus documentos para justificar sus motivos a través del sistema intranet alumno. Mas detalles sobre el procedimiento puedes encontrarlo en el siguiente link: \nhttps://drive.google.com/file/d/1MHa9Mrsu8qsStzqFKgVAVYUoJMHjMKOt/view"],
 
-    "utter_retiro_total__costo":["El retiro total tiene costo."],
+    "utter_retiro_total__costo":["El retiro total no tiene costo."],
 
     "utter_reserva_matricula__procedimiento":["Los alumnos que desean postergar su matricula por 1 o mas períodos académicos deberán realizar su reserva de matricula ingresando a la plataforma de intranet-alumno para subir su solicitud y el documento que acredite la razón invocada. Puedes acceder al formato de solicitud y a más información sobre el procedimiento ingresando al siguiente enlace:  \nhttps://drive.google.com/file/d/15ZZvoi1etESzH54Qd-xZNOV240cJ0UdH/view"],
 
